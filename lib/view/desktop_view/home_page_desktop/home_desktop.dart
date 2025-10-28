@@ -15,7 +15,7 @@ class HomePageDesktop extends StatelessWidget {
           height: double.infinity,
           alignment: Alignment.center,
           child: Text(
-            "M S KARTHIK",
+            "M S KARTHIK New",
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
