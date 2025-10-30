@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets/meteor.dart';
 
+import 'components/custom_header.dart';
+import 'components/heading_text.dart';
+
 class HomePageDesktop extends StatelessWidget {
   const HomePageDesktop({super.key});
 
@@ -10,14 +13,12 @@ class HomePageDesktop extends StatelessWidget {
       body: MeteorShower(
         numberOfMeteors: 30,
         duration: Duration(seconds: 20),
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          alignment: Alignment.center,
-          child: Text(
-            "M S KARTHIK New",
-            style: Theme.of(context).textTheme.titleSmall,
-          ),
+        child: Column(
+          children: [
+            CustomHeader(),
+            SizedBox(height: 80),
+            HeadingText(),
+          ],
         ),
       ),
     );

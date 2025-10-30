@@ -97,7 +97,7 @@ class MeteorPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final Paint trailPaint = Paint()
       ..shader = LinearGradient(
-        colors: [Colors.white, Colors.white.withOpacity(0)],
+        colors: [Colors.white70, Colors.white.withAlpha(0)],
         end: Alignment.topCenter,
         begin: Alignment.bottomCenter,
       ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
@@ -105,7 +105,7 @@ class MeteorPainter extends CustomPainter {
     canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), trailPaint);
 
     final Paint circlePaint = Paint()
-      ..color = Colors.white
+      ..color = Colors.white70
       ..style = PaintingStyle.fill;
 
     canvas.drawCircle(Offset(size.width / 2, size.height), 2, circlePaint);
